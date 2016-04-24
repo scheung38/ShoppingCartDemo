@@ -1,6 +1,6 @@
 package com.chotguy.service
 
-import com.chotguy.domain.ProductItem
+import com.chotguy.domain.{Offer, ProductItem}
 import com.chotguy.service.MemoryProductService.products
 
 /**
@@ -20,8 +20,8 @@ trait ProductService {
 object MemoryProductService {
 
   private val products = Map(
-    "APPLE" -> new ProductItem("Apple", .60),
-    "ORANGE" -> new ProductItem("Orange", .25)
+    "APPLE" -> new ProductItem("Apple", .60, new Offer(2, 1)),
+    "ORANGE" -> new ProductItem("Orange", .25, new Offer(3, 2))
   )
 
 }
